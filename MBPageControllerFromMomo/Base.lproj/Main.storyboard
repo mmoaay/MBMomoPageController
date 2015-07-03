@@ -12,6 +12,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gge-Kw-e0d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="RBF-0U-YPq"/>
@@ -69,16 +70,63 @@
                             <constraint firstAttribute="trailing" secondItem="1Nw-QX-gtF" secondAttribute="trailing" id="dfs-cP-U1J"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4cK-af-SJS"/>
+                    <navigationItem key="navigationItem" id="4cK-af-SJS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KRD-ri-GyN">
+                            <connections>
+                                <action selector="addPressed:" destination="vXZ-lx-hvc" id="RA4-ic-eRK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="firstView" destination="QjC-4x-5rK" id="Klu-cz-9qX"/>
                         <outlet property="scrollView" destination="1Nw-QX-gtF" id="vGr-oD-Pcc"/>
                         <outlet property="secondView" destination="qCR-Uu-JlA" id="C0I-5h-lk6"/>
+                        <segue destination="fgV-Lo-XNy" kind="presentation" identifier="modelFromHomeToAdd" id="OrU-GR-Ngq"/>
+                        <segue destination="Crg-3p-5jv" kind="show" identifier="pushFromHomeToAdd" id="EYw-aA-wgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="323" y="-462"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ucB-FR-Byh">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2R-IC-fTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="fgV-Lo-XNy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ntB-YJ-Y3t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Crg-3p-5jv" kind="relationship" relationship="rootViewController" id="0ca-CP-hDC"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1051" y="-462"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="oLN-Aw-Qy0">
+            <objects>
+                <viewController id="Crg-3p-5jv" customClass="MBAddViewController" customModule="MBPageControllerFromMomo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vDS-Wu-KnL"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZLJ-H9-TFW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZWs-Xj-mor">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k22-3d-Ph8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9A-S1-VjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742" y="-462"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="EYw-aA-wgc"/>
+    </inferredMetricsTieBreakers>
 </document>

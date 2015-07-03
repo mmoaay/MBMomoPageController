@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegate{
+class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegate, MBTableContentViewDelegate{
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var firstView: MBTableContentView!
@@ -20,31 +20,33 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
         self.initContent()
         self.initNavTitle()
     }
-
     
     func initContent() -> Bool{
+        self.firstView.delegate = self
         self.secondView.setTitle("CHECK")
         
         return true
     }
     
     func initNavTitle(){
-        self.navigationItem.titleView = MBTitleView.shareInstance().getView()
+        let titleView = MBTitleView.shareInstance().getView()
+        titleView.frame = CGRectMake(60, 0, SCREEN_SIZE.width-60, 44)
+        self.navigationItem.titleView = titleView
         MBTitleView.shareInstance().delegate = self
-        self.initTitleViewConstraint(self.navigationItem.titleView)
+//        self.initTitleViewConstraint(self.navigationItem.titleView)
     }
     
-    private func initTitleViewConstraint(titleView:UIView!){
-        titleView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let views:[String:UIView] = ["titleView":titleView]
-        let layoutStringH:String = "|-0-[titleView]-0-|"
-        let layoutStringV:String = "V:|-0-[titleView]-0-|"
-        let contraintsH:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringH, options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: views)
-        let contraintsV:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringV, options:NSLayoutFormatOptions(rawValue:0), metrics:nil, views: views)
-        titleView.superview?.addConstraints(contraintsH)
-        titleView.superview?.addConstraints(contraintsV)
-    }
+//    private func initTitleViewConstraint(titleView:UIView!){
+//        titleView.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        let views:[String:UIView] = ["titleView":titleView]
+//        let layoutStringH:String = "|-60-[titleView]-60-|"
+//        let layoutStringV:String = "V:|-0-[titleView]-0-|"
+//        let contraintsH:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringH, options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: views)
+//        let contraintsV:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringV, options:NSLayoutFormatOptions(rawValue:0), metrics:nil, views: views)
+//        titleView.superview?.addConstraints(contraintsH)
+//        titleView.superview?.addConstraints(contraintsV)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -65,6 +67,14 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
         }else{
             self.scrollView.scrollRectToVisible(CGRectOffset(self.scrollView.frame, scrollView.bounds.size.width, 0), animated: true)
         }
+    }
+    
+    func didSelectRowAtIndexPath(indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("pushFromHomeToAdd", sender: nil)
+    }
+    
+    @IBAction func addPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("modelFromHomeToAdd", sender: nil)
     }
 }
 

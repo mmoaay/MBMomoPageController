@@ -13,6 +13,7 @@
 		C22E6AB31B46381300373B6A /* MBTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB21B46381300373B6A /* MBTableHeaderView.swift */; };
 		C22E6AB61B4655D400373B6A /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB51B4655D400373B6A /* MBConstants.swift */; };
 		C22E6AB91B4661D300373B6A /* UIViewParallelHeaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB81B4661D300373B6A /* UIViewParallelHeaderExtension.swift */; };
+		C22E6ABB1B467CEE00373B6A /* MBAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6ABA1B467CEE00373B6A /* MBAddViewController.swift */; };
 		C25A55DF1B436D7A00D63410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A55DE1B436D7A00D63410 /* AppDelegate.swift */; };
 		C25A55E11B436D7A00D63410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A55E01B436D7A00D63410 /* ViewController.swift */; };
 		C25A55E41B436D7A00D63410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25A55E21B436D7A00D63410 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		C22E6AB21B46381300373B6A /* MBTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBTableHeaderView.swift; sourceTree = "<group>"; };
 		C22E6AB51B4655D400373B6A /* MBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
 		C22E6AB81B4661D300373B6A /* UIViewParallelHeaderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewParallelHeaderExtension.swift; sourceTree = "<group>"; };
+		C22E6ABA1B467CEE00373B6A /* MBAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBAddViewController.swift; sourceTree = "<group>"; };
 		C25A55D91B436D7A00D63410 /* MBPageControllerFromMomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBPageControllerFromMomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25A55DD1B436D7A00D63410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25A55DE1B436D7A00D63410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				C25A55E01B436D7A00D63410 /* ViewController.swift */,
+				C22E6ABA1B467CEE00373B6A /* MBAddViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C25A55E11B436D7A00D63410 /* ViewController.swift in Sources */,
 				C22E6AB61B4655D400373B6A /* MBConstants.swift in Sources */,
 				C25A55DF1B436D7A00D63410 /* AppDelegate.swift in Sources */,
+				C22E6ABB1B467CEE00373B6A /* MBAddViewController.swift in Sources */,
 				C2E481CB1B43761E006C8099 /* MBContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,11 +8,19 @@
 
 import UIKit
 
+//定义协议相应button方法
+protocol MBTableContentViewDelegate:NSObjectProtocol{
+    //回调方法
+    func didSelectRowAtIndexPath(indexPath: NSIndexPath)
+}
+
 class MBTableContentView: UIView, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var headImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var contentView: UIView!
+    
+    var delegate:MBTableContentViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,6 +64,10 @@ class MBTableContentView: UIView, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return String(format: "Section %d", section)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.delegate?.didSelectRowAtIndexPath(indexPath)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
