@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22E6AAD1B462CA800373B6A /* MBTableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AAC1B462CA800373B6A /* MBTableContentView.swift */; };
+		C22E6AAF1B462CD900373B6A /* MBTableContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22E6AAE1B462CD900373B6A /* MBTableContentView.xib */; };
+		C22E6AB11B46380700373B6A /* MBTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C22E6AB01B46380700373B6A /* MBTableHeaderView.xib */; };
+		C22E6AB31B46381300373B6A /* MBTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB21B46381300373B6A /* MBTableHeaderView.swift */; };
+		C22E6AB61B4655D400373B6A /* MBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB51B4655D400373B6A /* MBConstants.swift */; };
+		C22E6AB91B4661D300373B6A /* UIViewParallelHeaderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22E6AB81B4661D300373B6A /* UIViewParallelHeaderExtension.swift */; };
 		C25A55DF1B436D7A00D63410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A55DE1B436D7A00D63410 /* AppDelegate.swift */; };
 		C25A55E11B436D7A00D63410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A55E01B436D7A00D63410 /* ViewController.swift */; };
 		C25A55E41B436D7A00D63410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25A55E21B436D7A00D63410 /* Main.storyboard */; };
@@ -30,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C22E6AAC1B462CA800373B6A /* MBTableContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBTableContentView.swift; sourceTree = "<group>"; };
+		C22E6AAE1B462CD900373B6A /* MBTableContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBTableContentView.xib; sourceTree = "<group>"; };
+		C22E6AB01B46380700373B6A /* MBTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MBTableHeaderView.xib; sourceTree = "<group>"; };
+		C22E6AB21B46381300373B6A /* MBTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBTableHeaderView.swift; sourceTree = "<group>"; };
+		C22E6AB51B4655D400373B6A /* MBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBConstants.swift; sourceTree = "<group>"; };
+		C22E6AB81B4661D300373B6A /* UIViewParallelHeaderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewParallelHeaderExtension.swift; sourceTree = "<group>"; };
 		C25A55D91B436D7A00D63410 /* MBPageControllerFromMomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBPageControllerFromMomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25A55DD1B436D7A00D63410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25A55DE1B436D7A00D63410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22E6AB41B4655B500373B6A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C22E6AB51B4655D400373B6A /* MBConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		C22E6AB71B46578900373B6A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C22E6AB81B4661D300373B6A /* UIViewParallelHeaderExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		C25A55D01B436D7A00D63410 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,8 @@
 		C25A55DB1B436D7A00D63410 /* MBPageControllerFromMomo */ = {
 			isa = PBXGroup;
 			children = (
+				C22E6AB71B46578900373B6A /* Extensions */,
+				C22E6AB41B4655B500373B6A /* Constants */,
 				C2E481C91B4375C4006C8099 /* Controller */,
 				C2E481C81B4375BF006C8099 /* View */,
 				C25A55DE1B436D7A00D63410 /* AppDelegate.swift */,
@@ -128,6 +158,10 @@
 				C2E481CC1B43765A006C8099 /* MBContentView.xib */,
 				C29A6F6B1B43D71800B565E7 /* MBTitleView.swift */,
 				C29A6F6D1B43D72D00B565E7 /* MBTitleView.xib */,
+				C22E6AAC1B462CA800373B6A /* MBTableContentView.swift */,
+				C22E6AAE1B462CD900373B6A /* MBTableContentView.xib */,
+				C22E6AB01B46380700373B6A /* MBTableHeaderView.xib */,
+				C22E6AB21B46381300373B6A /* MBTableHeaderView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -223,8 +257,10 @@
 			files = (
 				C29A6F6E1B43D72D00B565E7 /* MBTitleView.xib in Resources */,
 				C25A55E41B436D7A00D63410 /* Main.storyboard in Resources */,
+				C22E6AAF1B462CD900373B6A /* MBTableContentView.xib in Resources */,
 				C25A55E91B436D7A00D63410 /* LaunchScreen.xib in Resources */,
 				C25A55E61B436D7A00D63410 /* Images.xcassets in Resources */,
+				C22E6AB11B46380700373B6A /* MBTableHeaderView.xib in Resources */,
 				C2E481CD1B43765A006C8099 /* MBContentView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22E6AAD1B462CA800373B6A /* MBTableContentView.swift in Sources */,
+				C22E6AB31B46381300373B6A /* MBTableHeaderView.swift in Sources */,
 				C29A6F6C1B43D71800B565E7 /* MBTitleView.swift in Sources */,
+				C22E6AB91B4661D300373B6A /* UIViewParallelHeaderExtension.swift in Sources */,
 				C25A55E11B436D7A00D63410 /* ViewController.swift in Sources */,
+				C22E6AB61B4655D400373B6A /* MBConstants.swift in Sources */,
 				C25A55DF1B436D7A00D63410 /* AppDelegate.swift in Sources */,
 				C2E481CB1B43761E006C8099 /* MBContentView.swift in Sources */,
 			);

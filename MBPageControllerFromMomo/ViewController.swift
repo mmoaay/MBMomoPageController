@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegate{
 
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var firstView: MBContentView!
+    @IBOutlet weak var firstView: MBTableContentView!
     @IBOutlet weak var secondView: MBContentView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
 
     
     func initContent() -> Bool{
-        self.firstView.setTitle("YOYO")
         self.secondView.setTitle("CHECK")
         
         return true
@@ -36,7 +35,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
     }
     
     private func initTitleViewConstraint(titleView:UIView!){
-        self.navigationItem.titleView?.translatesAutoresizingMaskIntoConstraints = false
+        titleView.translatesAutoresizingMaskIntoConstraints = false
         
         let views:[String:UIView] = ["titleView":titleView]
         let layoutStringH:String = "|-0-[titleView]-0-|"
