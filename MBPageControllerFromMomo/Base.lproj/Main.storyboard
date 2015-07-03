@@ -34,14 +34,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nw-QX-gtF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-kV-aeR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nw-QX-gtF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-4x-5rK" customClass="MBTableContentView" customModule="MBPageControllerFromMomo" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QjC-4x-5rK" customClass="MBTableContentView" customModule="MBPageControllerFromMomo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Uu-JlA" customClass="MBContentView" customModule="MBPageControllerFromMomo" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-Uu-JlA" customClass="MBContentView" customModule="MBPageControllerFromMomo" customModuleProvider="target">
                                         <rect key="frame" x="600" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -64,11 +68,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="1Nw-QX-gtF" secondAttribute="bottom" id="3MH-Gc-PEf"/>
+                            <constraint firstItem="pzW-kV-aeR" firstAttribute="centerX" secondItem="1Nw-QX-gtF" secondAttribute="centerX" id="421-vy-8kj"/>
                             <constraint firstItem="QjC-4x-5rK" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="J1k-de-iKE"/>
+                            <constraint firstItem="pzW-kV-aeR" firstAttribute="width" secondItem="1Nw-QX-gtF" secondAttribute="width" id="Kvl-vY-QiI"/>
                             <constraint firstItem="1Nw-QX-gtF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="O0i-Wl-QMB"/>
+                            <constraint firstItem="pzW-kV-aeR" firstAttribute="height" secondItem="1Nw-QX-gtF" secondAttribute="height" id="RSJ-Wz-DTP"/>
+                            <constraint firstItem="QjC-4x-5rK" firstAttribute="width" secondItem="pzW-kV-aeR" secondAttribute="width" id="XCz-bK-QN9"/>
                             <constraint firstItem="1Nw-QX-gtF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="aye-Xh-LmF"/>
                             <constraint firstAttribute="trailing" secondItem="1Nw-QX-gtF" secondAttribute="trailing" id="dfs-cP-U1J"/>
+                            <constraint firstItem="pzW-kV-aeR" firstAttribute="centerY" secondItem="1Nw-QX-gtF" secondAttribute="centerY" id="gZR-0b-Dq7"/>
+                            <constraint firstItem="QjC-4x-5rK" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="koB-Lj-grS"/>
+                            <constraint firstItem="QjC-4x-5rK" firstAttribute="height" secondItem="pzW-kV-aeR" secondAttribute="height" id="m8a-nZ-51d"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="J1k-de-iKE"/>
+                                <exclude reference="koB-Lj-grS"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="4cK-af-SJS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KRD-ri-GyN">
