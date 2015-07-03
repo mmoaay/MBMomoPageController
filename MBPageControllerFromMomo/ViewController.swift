@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
     
     func initNavTitle(){
         let titleView = MBTitleView.shareInstance().getView()
-        titleView.frame = CGRectMake(60, 0, SCREEN_SIZE.width-60, 44)
+        titleView.frame = CGRectMake(44, 0, SCREEN_SIZE.width-88, 44)
         self.navigationItem.titleView = titleView
         MBTitleView.shareInstance().delegate = self
 //        self.initTitleViewConstraint(self.navigationItem.titleView)
