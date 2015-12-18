@@ -8,4 +8,6 @@
 
 4.使用runtime+extension实现头部视图景深效果 
 
+![效果](https://github.com/mmoaay/MBPageControllerFromMomo/blob/master/MBPageControllerFromMomo.gif)
+
 详情请参见demo
