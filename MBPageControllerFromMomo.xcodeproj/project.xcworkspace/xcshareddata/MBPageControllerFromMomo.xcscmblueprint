@@ -1,28 +1,37 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9+++D469569",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9" : 0
+    "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++33481C6" : 0,
+    "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++D483FB4" : 0,
+    "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9+++D469569" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DBA3801B-E58B-48EB-A6DB-7FFBEE198B86",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9" : ""
+    "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++33481C6" : "",
+    "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++D483FB4" : "",
+    "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9+++D469569" : "MBPageControllerFromMomo\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MBPageControllerFromMomo",
-  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MBPageControllerFromMomo.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mmoaay\/MBPageControllerFromMomo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++33481C6"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mmoaay\/MBPageControllerFromMomo.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5420BC34BCCCACC2E5A654D19A429165FE584AC7+++D483FB4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mmoaay\/MBPageControllerFromMomo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78FA5F18B38C9AC7C33F4CCD4A6CBAA402260FC9+++D469569"
     }
   ]
 }
