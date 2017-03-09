@@ -14,11 +14,11 @@ class MBAddViewController: UIViewController {
         super.viewDidLoad()
         
         if self.navigationController?.viewControllers[0] == self {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: Selector("donePressed:"))
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(MBAddViewController.donePressed(_:)))
         }
     }
 
-    func donePressed(sender: AnyObject) {
-        self .dismissViewControllerAnimated(true, completion: nil)
+    func donePressed(_ sender: AnyObject) {
+        self .dismiss(animated: true, completion: nil)
     }
 }

@@ -22,7 +22,7 @@ class MBContentView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        NSBundle.mainBundle().loadNibNamed("MBContentView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("MBContentView", owner: self, options: nil)
         self.addSubview(self.contentView)
         
         self.initConstraint()
@@ -32,13 +32,13 @@ class MBContentView: UIView {
         let views:[String:UIView] = ["contentView":self.contentView]
         let layoutStringH:String = "|-0-[contentView]-0-|"
         let layoutStringV:String = "V:|-0-[contentView]-0-|"
-        let contraintsH:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringH, options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: views)
-        let contraintsV:[NSLayoutConstraint] = NSLayoutConstraint.constraintsWithVisualFormat(layoutStringV, options:NSLayoutFormatOptions(rawValue:0), metrics:nil, views: views)
+        let contraintsH:[NSLayoutConstraint] = NSLayoutConstraint.constraints(withVisualFormat: layoutStringH, options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: views)
+        let contraintsV:[NSLayoutConstraint] = NSLayoutConstraint.constraints(withVisualFormat: layoutStringV, options:NSLayoutFormatOptions(rawValue:0), metrics:nil, views: views)
         self.addConstraints(contraintsH)
         self.addConstraints(contraintsV)
     }
     
-    func setTitle(let title:String){
+    func setTitle(_ title:String){
         self.titleLabel.text=title
     }
 

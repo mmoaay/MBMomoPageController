@@ -29,10 +29,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
     }
     
     func initNavTitle(){
-        let titleView = MBTitleView.shareInstance().getView()
-        titleView.frame = CGRectMake(44, 0, SCREEN_SIZE.width-88, 44)
+        let titleView = MBTitleView.shareInstance.getView()
+        titleView?.frame = CGRect(x: 44, y: 0, width: SCREEN_SIZE.width-88, height: 44)
         self.navigationItem.titleView = titleView
-        MBTitleView.shareInstance().delegate = self
+        MBTitleView.shareInstance.delegate = self
 //        self.initTitleViewConstraint(self.navigationItem.titleView)
     }
     
@@ -53,28 +53,28 @@ class ViewController: UIViewController, UIScrollViewDelegate, MBTitleViewDelegat
         // Dispose of any resources that can be recreated.
     }
 
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
     }
 
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        MBTitleView.shareInstance().setTitleXPos(scrollView.contentOffset.x, width: scrollView.bounds.size.width)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        MBTitleView.shareInstance.setTitleXPos(scrollView.contentOffset.x, width: scrollView.bounds.size.width)
     }
     
-    func slideWithType(type:ContentType) {
-        if ContentType.ContentTypeLeft == type{
-            self.scrollView.scrollRectToVisible(CGRectOffset(self.scrollView.frame, 0, 0), animated: true)
+    func slideWithType(_ type:ContentType) {
+        if ContentType.contentTypeLeft == type{
+            self.scrollView.scrollRectToVisible(self.scrollView.frame.offsetBy(dx: 0, dy: 0), animated: true)
         }else{
-            self.scrollView.scrollRectToVisible(CGRectOffset(self.scrollView.frame, scrollView.bounds.size.width, 0), animated: true)
+            self.scrollView.scrollRectToVisible(self.scrollView.frame.offsetBy(dx: scrollView.bounds.size.width, dy: 0), animated: true)
         }
     }
     
-    func didSelectRowAtIndexPath(indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("pushFromHomeToAdd", sender: nil)
+    func didSelectRowAtIndexPath(_ indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "pushFromHomeToAdd", sender: nil)
     }
     
-    @IBAction func addPressed(sender: AnyObject) {
-        self.performSegueWithIdentifier("modelFromHomeToAdd", sender: nil)
+    @IBAction func addPressed(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "modelFromHomeToAdd", sender: nil)
     }
 }
 

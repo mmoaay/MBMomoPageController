@@ -9,17 +9,20 @@
 import UIKit
 
 enum ContentType{
-    case ContentTypeLeft,ContentTypeRight
+    case contentTypeLeft,contentTypeRight
 }
 
 //定义协议相应button方法
 protocol MBTitleViewDelegate:NSObjectProtocol{
     //回调方法
-    func slideWithType(type:ContentType)
+    func slideWithType(_ type:ContentType)
 }
 
 class MBTitleView: UIView {
     
+    
+    static let shareInstance = MBTitleView()
+
     @IBOutlet var contentView: UIView!
 
     @IBOutlet weak var topView: UIView!
@@ -43,51 +46,40 @@ class MBTitleView: UIView {
     }
     */
     
-    class func shareInstance()->MBTitleView{
-        struct MBSingleton{
-            static var predicate:dispatch_once_t = 0
-            static var instance:MBTitleView? = nil
-        }
-        dispatch_once(&MBSingleton.predicate,{
-            MBSingleton.instance=MBTitleView()
-            }
-        )
-        return MBSingleton.instance!
-    }
     
     func getView() -> UIView! {
-        NSBundle.mainBundle().loadNibNamed("MBTitleView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("MBTitleView", owner: self, options: nil)
         
-        self.leftButton.setTitleColor(UIColor(red: 255/255, green: 105/255, blue: 0, alpha: 1), forState: UIControlState.Disabled)
-        self.leftButton.setTitleColor(UIColor(red: 239/255, green: 195/255, blue: 160/255, alpha: 1), forState: UIControlState.Normal)
+        self.leftButton.setTitleColor(UIColor(red: 255/255, green: 105/255, blue: 0, alpha: 1), for: UIControlState.disabled)
+        self.leftButton.setTitleColor(UIColor(red: 239/255, green: 195/255, blue: 160/255, alpha: 1), for: UIControlState())
         
-        self.rightButton.setTitleColor(UIColor(red: 255/255, green: 105/255, blue: 0, alpha: 1), forState: UIControlState.Disabled)
-        self.rightButton.setTitleColor(UIColor(red: 239/255, green: 195/255, blue: 160/255, alpha: 1), forState: UIControlState.Normal)
+        self.rightButton.setTitleColor(UIColor(red: 255/255, green: 105/255, blue: 0, alpha: 1), for: UIControlState.disabled)
+        self.rightButton.setTitleColor(UIColor(red: 239/255, green: 195/255, blue: 160/255, alpha: 1), for: UIControlState())
         
-        self.leftButton.enabled=false
-        self.rightButton.enabled=true
+        self.leftButton.isEnabled=false
+        self.rightButton.isEnabled=true
         
         return self.contentView
     }
     
-    func setTitleXPos(xPos:CGFloat, width:CGFloat) {
+    func setTitleXPos(_ xPos:CGFloat, width:CGFloat) {
 
         if xPos > width/2 {
-            if self.leftButton.enabled == false {
-                self.leftButton.enabled=true
-                self.leftButton.titleLabel?.font=UIFont.systemFontOfSize(12)
+            if self.leftButton.isEnabled == false {
+                self.leftButton.isEnabled=true
+                self.leftButton.titleLabel?.font=UIFont.systemFont(ofSize: 12)
                 
-                self.rightButton.enabled=false
-                self.rightButton.titleLabel?.font=UIFont.boldSystemFontOfSize(15)
+                self.rightButton.isEnabled=false
+                self.rightButton.titleLabel?.font=UIFont.boldSystemFont(ofSize: 15)
             }
         }
         else {
-            if self.rightButton.enabled == false {
-                self.rightButton.enabled=true
-                self.rightButton.titleLabel?.font=UIFont.systemFontOfSize(12)
+            if self.rightButton.isEnabled == false {
+                self.rightButton.isEnabled=true
+                self.rightButton.titleLabel?.font=UIFont.systemFont(ofSize: 12)
                 
-                self.leftButton.enabled=false
-                self.leftButton.titleLabel?.font=UIFont.boldSystemFontOfSize(15)
+                self.leftButton.isEnabled=false
+                self.leftButton.titleLabel?.font=UIFont.boldSystemFont(ofSize: 15)
             }
         }
         
@@ -95,7 +87,7 @@ class MBTitleView: UIView {
         let rightButtonxPos = self.rightButton.center.x
         let topViewMoveUnit = (rightButtonxPos-leftButtonxPos)/width
         
-        self.topView.transform=CGAffineTransformMakeTranslation(-xPos*topViewMoveUnit, 0)
+        self.topView.transform=CGAffineTransform(translationX: -xPos*topViewMoveUnit, y: 0)
         
         
         let leftIconxPos = self.leftIcon.frame.origin.x
@@ -103,16 +95,16 @@ class MBTitleView: UIView {
         let indicatorMoveUnit = (rightIconxPos-leftIconxPos)/width
         let scalex = sin(CGFloat(M_PI) * (xPos/width))*2
         
-        self.indicator.frame = CGRectMake(self.leftIcon.frame.origin.x+indicatorMoveUnit*xPos-scalex*self.leftIcon.frame.size.width/2, self.indicator.frame.origin.y, self.leftIcon.frame.size.width*(scalex+1), self.indicator.frame.size.height)
+        self.indicator.frame = CGRect(x: self.leftIcon.frame.origin.x+indicatorMoveUnit*xPos-scalex*self.leftIcon.frame.size.width/2, y: self.indicator.frame.origin.y, width: self.leftIcon.frame.size.width*(scalex+1), height: self.indicator.frame.size.height)
 //        let translationTransfrom = CGAffineTransformMakeTranslation(xPos*indicatorMoveUnit, 0)
 //        self.indicator.transform=CGAffineTransformScale(translationTransfrom, scalex, 1)
     }
 
-    @IBAction func leftPressed(sender: AnyObject) {
-        delegate?.slideWithType(ContentType.ContentTypeLeft)
+    @IBAction func leftPressed(_ sender: AnyObject) {
+        delegate?.slideWithType(ContentType.contentTypeLeft)
     }
     
-    @IBAction func rightPressed(sender: AnyObject) {
-        delegate?.slideWithType(ContentType.ContentTypeRight)
+    @IBAction func rightPressed(_ sender: AnyObject) {
+        delegate?.slideWithType(ContentType.contentTypeRight)
     }
 }

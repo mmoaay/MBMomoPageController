@@ -8,6 +8,6 @@
 
 import UIKit
 
-let SCREEN_SIZE = UIScreen.mainScreen().bounds
+let SCREEN_SIZE = UIScreen.main.bounds
 
 

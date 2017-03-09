@@ -227,9 +227,11 @@
 				TargetAttributes = {
 					C25A55D81B436D7A00D63410 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0820;
 					};
 					C25A55ED1B436D7A00D63410 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0820;
 						TestTargetID = C25A55D81B436D7A00D63410;
 					};
 				};
@@ -420,6 +422,7 @@
 				INFOPLIST_FILE = MBPageControllerFromMomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -430,6 +433,7 @@
 				INFOPLIST_FILE = MBPageControllerFromMomo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -448,6 +452,7 @@
 				INFOPLIST_FILE = MBPageControllerFromMomoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBPageControllerFromMomo.app/MBPageControllerFromMomo";
 			};
 			name = Debug;
@@ -463,6 +468,7 @@
 				INFOPLIST_FILE = MBPageControllerFromMomoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBPageControllerFromMomo.app/MBPageControllerFromMomo";
 			};
 			name = Release;
